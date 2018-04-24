@@ -24,6 +24,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(modeItem => Model[0].FullName)
+            </th>
+            <th>
                 <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Last Name</a>
             </th>
             <th>
@@ -39,6 +42,9 @@
         @foreach (var item in Model)
         {
             <tr>
+                <td>
+                    @Html.DisplayFor(modeItem => item.FullName)
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.LastName)
                 </td>
